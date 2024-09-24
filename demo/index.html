@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deepakkumar's Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-analytics.js"></script>
+
+    <!-- Your Firebase Configuration -->
+    <script>
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyAh2WkwckhBFtksz_HNxB5PVfTyMH8ahwQ",
+            authDomain: "deepak-profile-app.firebaseapp.com",
+            projectId: "deepak-profile-app",
+            storageBucket: "deepak-profile-app.appspot.com",
+            messagingSenderId: "781391889587",
+            appId: "1:781391889587:web:ef218c958cdb70145a9cc6",
+            measurementId: "G-E547C0G11Y"
+        };
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const analytics = firebase.getAnalytics(app);
+    </script>
+</head>
+<body>
+
+  <!-- Quick Info Section (Floating Sidebar) -->
+  <aside id="quick-info">
+    <h2>Quick Info</h2>
+    <ul>
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </aside>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Deepakkumar Shanmugasundaram</h1>
+    <img src="profile.jpg" alt="Profile Picture" id="profile-pic">
+  </header>
+
+ <!-- Profile Section -->
+ <section id="profile">
+    <h2>About Me</h2>
+    <p>I am a dynamic and results-oriented professional with a passion for leveraging cutting-edge technologies to drive innovation and excellence. With a Master’s degree in Computer Science, majoring in Artificial Intelligence from Troy University, and a Bachelor’s degree in Information Technology, I have honed my skills across a diverse range of fields including full-stack development, mobile app development using Flutter, and cloud technologies such as AWS and Microsoft Azure.</p>
+    <p>Throughout my career, I have been driven by a deep-seated curiosity and an eagerness to stay ahead of the technological curve. I thrive on embracing new challenges and continually updating my skill set to adapt to the latest advancements in the tech world. My journey has been marked by impactful projects such as developing the Advanced Virtual Try-On Technology using AI, which has revolutionized user engagement by simulating in-store experiences at home. Additionally, I have worked on innovative solutions like the Accident Prevention and Detection System using IoT and blockchain, showcasing my ability to apply technology for meaningful problem-solving.</p>
+    <p>My professional experience includes roles as a Flutter Developer and Junior Data Scientist, where I have applied my expertise to create user-friendly applications, implement machine learning models, and contribute to data-driven decision-making processes. My commitment to continuous learning and professional growth drives me to explore new technologies and methodologies, ensuring that I am always at the forefront of industry trends.</p>
+    <p>If you are interested in learning more about my work and experiences, I invite you to explore the detailed sections of my website. Here, you will find insights into my projects, work experience, and other accomplishments that reflect my dedication to pushing the boundaries of technology.</p>
+  </section>    
+
+ <!-- Projects Section -->
+<section id="projects">
+    <h2>Projects</h2>
+  
+    <div class="project-container">
+      <div class="project-image">
+        <img src="virtual-tryon.jpg" alt="Virtual Try-On Technology">
+      </div>
+      <div class="project-details">
+        <h3>Virtual Try-On Technology</h3>
+        <p>An AI-based virtual try-on system that revolutionizes user engagement by simulating in-store experiences at home.</p>
+        <button onclick="toggleDetails('project1')">Learn More</button>
+        <div id="project1" class="project-extra hidden">
+          <p>This project uses AI and machine learning to allow users to virtually try on clothing using their device's camera. It integrates various algorithms to overlay apparel on a user’s image seamlessly.</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="project-container">
+      <div class="project-image">
+        <img src="accident-prevention.jpg" alt="Accident Prevention and Detection System">
+      </div>
+      <div class="project-details">
+        <h3>Accident Prevention and Detection System</h3>
+        <p>A blockchain-based IoT solution to prevent and detect road accidents, enhancing vehicle safety.</p>
+        <button onclick="toggleDetails('project2')">Learn More</button>
+        <div id="project2" class="project-extra hidden">
+          <p>This system uses IoT sensors to monitor vehicle conditions and alert the driver in real-time. It uses blockchain to securely store and analyze the data to predict potential accidents.</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="project-container">
+      <div class="project-image">
+        <img src="water-management.jpg" alt="Smart Water Management System">
+      </div>
+      <div class="project-details">
+        <h3>Smart Water Management System</h3>
+        <p>An IoT-driven water management system designed to optimize water usage and reduce wastage in urban areas.</p>
+        <button onclick="toggleDetails('project3')">Learn More</button>
+        <div id="project3" class="project-extra hidden">
+          <p>The system uses smart sensors to monitor water levels and usage patterns, helping in efficient water distribution and leak detection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <h2>Work Experience</h2>
+
+    <div class="experience">
+      <h3>Flutter Developer at Dexra Solutions</h3>
+      <p>Dec 2021 - July 2022</p>
+      <button onclick="toggleDetails('experience1')">Learn More</button>
+      <div id="experience1" class="experience-details hidden">
+        <p>At Dexra Solutions, I worked on developing mobile applications using Flutter. I integrated APIs and created responsive, cross-platform apps, improving user experience and functionality for multiple clients.</p>
+      </div>
+    </div>
+
+    <div class="experience">
+      <h3>Junior Data Scientist at Tenth Planet Technology</h3>
+      <p>June 2020 - Dec 2021</p>
+      <button onclick="toggleDetails('experience2')">Learn More</button>
+      <div id="experience2" class="experience-details hidden">
+        <p>At Tenth Planet, I applied machine learning techniques to analyze large datasets, focusing on predictive modeling and data visualization. I contributed to improving the accuracy of data-driven decision-making processes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Artificial Intelligence & Machine Learning</li>
+      <li>Full-Stack Development (React, Node.js)</li>
+      <li>Mobile App Development (Flutter, Android)</li>
+      <li>Cloud Technologies (AWS, Azure)</li>
+      <li>Data Visualization (Power BI, Tableau)</li>
+    </ul>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Feel free to reach out via email or phone:</p>
+    <ul>
+      <li>Email: <a href="mailto:dshanmugasundaram@troy.edu">dshanmugasundaram@troy.edu</a></li>
+      <li>Phone: +1-334-492-6830</li>
+    </ul>
+  </section>
+  <!-- Add to your index.html -->
+<link rel="manifest" href="/manifest.json">
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }, function(err) {
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    });
+  }
+</script>
+
+
+  <script src="app.js"></script>
+
+  
+</body>
+</html>
